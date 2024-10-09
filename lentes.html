@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lentes Para Todos</title>
     <style>
-        /* Estilos generales */
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -61,7 +61,7 @@
         .image {
             width: 350px;
             transition: opacity 0.3s ease;
-            cursor: pointer; /* Cambia el cursor cuando el usuario pasa por encima de la imagen */
+            cursor: pointer; 
         }
 
         .back-button {
@@ -86,6 +86,22 @@
             font-size: 1.2em;
             color: #555;
         }
+
+        .saber-mas-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .saber-mas-button:hover {
+            background-color: #0056b3;
+        }
+
     </style>
 </head>
 <body>
@@ -112,8 +128,12 @@
             <p class="objective">Objetivo del proyecto:(El objetivo es dotar a los alunos que necesitan lentes a bajo costo, todo esto con el fin de mejorar su desempeño académico dentro y fuera de las aulas.
                 )</p>
                 <p>Docentes que participan:Maestro Nazario Hernandez y Maestra Adriana Martinez</p>
+
+            
+            <button class="saber-mas-button" onclick="window.location.href='saber_mas.html';">SABER MÁS</button>
         </section>
     </div>
+
     <br>
     <br>
     <br>
@@ -135,8 +155,8 @@
         imageElement.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             imageElement.src = images[currentIndex];
-            <button onclick="window.location.href='saber_mas.html';">SABER MÁS</button>
         });
     </script>
+
 </body>
 </html>
