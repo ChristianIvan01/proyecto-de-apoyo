@@ -111,19 +111,36 @@
 
     <header>
         <h1>PROYECTO ESCUELA, COMUNIDAD (PEC)</h1>
+        <style>
+            @keyframes parpadeo {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+    
+            @keyframes brillo {
+                0% { text-shadow: 0 0 5px #26f359, 0 0 10px #16d816; }
+                50% { text-shadow: 0 0 20px #1aa821, 0 0 30px #0b790b; }
+                100% { text-shadow: 0 0 5px #0c7902, 0 0 10px #0b3507; }
+            }
+    
+            h1 {
+                font-size: 3em;
+                animation: parpadeo 1s infinite, brillo 1.5s infinite;
+            }
+        </style>
         <nav>
             <ul>
                 <li><a href="lentes.html">LENTES PARA TODOS</a></li>
                 <li><a href="Asilo.html">ASILO</a></li>
-                <li><a href="pagina3.html">Opción 3</a></li>
-                <li><a href="pagina4.html">Opción 4</a></li>
+                <li><a href="TAPAS.HTML">TAPAS</a></li>
+                <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
         <div class="image-container">
-            <img src="LOGOL.png" class="image" alt="LOGO DE PROYECTO PEC">
+            <img src="LOGOPP.png" class="image" alt="LOGO DE PROYECTO PEC">
         </div>
         <section>
             <h2>Integrantes</h2>
