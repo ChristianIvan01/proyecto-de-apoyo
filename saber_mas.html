@@ -19,18 +19,71 @@
         }
 
         img {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
+            width: 250px;
+            height: 300px;
+            margin: 20px;
+            cursor: pointer;
+            transition: opacity 0.5s ease-in-out; 
+        }
+
+        .hidden {
+            opacity: 0; 
         }
     </style>
 </head>
 <body>
-    <section>
-        <h1>La miopía ocasiona visión borrosa cuando la imagen visual es enfocada al frente de la retina y no directamente sobre ella. Esto se presenta cuando la longitud física del ojo es superior a la longitud óptica.</h1>
-        <img src="IL.jfif" alt="Imagen 1"> 
-        <h1>Los objetos aparecen borrosos tanto de cerca como de lejos, lo que puede dificultar tareas como la lectura, la conducción y el reconocimiento facial. Las líneas rectas pueden verse un poco curvas, y los detalles finos pueden perderse en la neblina visual y generar fatiga en los ojos.</h1>
-        <img src="IL2.jpeg" alt="Imagen 2">
-    </section>
+    <center>
+        <section>
+            <h1>Problemas de visión</h1>
+            <p>Haz clic en las imágenes para alternar entre astigmatismo y miopía</p>
+
+            
+            <img src="a1.jpg" id="imagen1" alt="Astigmatismo" onclick="cambiarImagen1()">
+
+            
+            <img src="m1.jpg" id="imagen2" alt="Miopía" onclick="cambiarImagen2()">
+
+            <script>
+               
+                function cambiarImagen1() {
+                    var imagen1 = document.getElementById("imagen1");
+                    imagen1.classList.add('hidden'); 
+                    
+                    setTimeout(function() { 
+                        if (imagen1.src.includes("a.jpeg")) {
+                            imagen1.src = "a1.jpg";  
+                            imagen1.alt = "Astigmatismo-Miopía";
+                        } else {
+                            imagen1.src = "a.jpeg";   
+                            imagen1.alt = "Astigmatismo";
+                        }
+                        imagen1.classList.remove('hidden'); 
+                    }, 500);
+                }
+
+                function cambiarImagen2() {
+                    var imagen2 = document.getElementById("imagen2");
+                    imagen2.classList.add('hidden'); 
+                    
+                    setTimeout(function() {
+                        if (imagen2.src.includes("m1.jpg")) {
+                            imagen2.src = "m.jpeg";  
+                            imagen2.alt = "Astigmatismo-Miopía";
+                        } else {
+                            imagen2.src = "m1.jpg";   
+                            imagen2.alt = "Miopía";
+                        }
+                        imagen2.classList.remove('hidden'); 
+                    }, 500);
+                }
+            </script>
+
+            <h1>La miopía</h1>
+            <p>Ocasiona visión borrosa cuando la imagen visual es enfocada al frente de la retina y no directamente sobre ella. Esto se presenta cuando la longitud física del ojo es superior a la longitud óptica.</p>
+
+            <h1>Astigmatismo</h1>
+            <p>Los objetos aparecen borrosos tanto de cerca como de lejos, lo que puede dificultar tareas como la lectura, la conducción y el reconocimiento facial.</p>
+        </section>
+    </center>
 </body>
 </html>
