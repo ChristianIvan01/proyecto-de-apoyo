@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAPAS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(233, 94, 124);
+            color: #130101;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image {
+            width: 350px;
+            transition: opacity 0.3s ease;
+            cursor: pointer; 
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #ddd;
+        }
+
+        .objective {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        .saber-mas-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .saber-mas-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TAPAS</h1>
+        <style>
+            @keyframes parpadeo {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+    
+            @keyframes brillo {
+                0% { text-shadow: 0 0 5px #0c2d85, 0 0 10px #113ac2; }
+                50% { text-shadow: 0 0 20px #0918e0, 0 0 30px #04102b; }
+                100% { text-shadow: 0 0 5px #020479, 0 0 10px #05464e; }
+            }
+    
+            h1 {
+                font-size: 3em;
+                animation: parpadeo 1s infinite, brillo 1.5s infinite;
+            }
+        </style>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Asilo.html">ASILO</a></li>
+                <li><a href="TAPAS.HTML">TAPAS</a></li>
+                <li><a href="ZOOLOGICO.html">ZOLOOGICO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="image-container">
+            <img src="LOGOTAPAS.png" class="image" alt="LOGO DE PROYECTO PEC">
+            <button class="back-button" onclick="window.history.back()">Atrás</button>
+        </div>
+        <section>
+            <h2>Proyecto: TAPAS</h2>
+            <p class="objective">Objetivo del proyecto:El objetivo de este proyecto es recolectar tapas de botella, esto con el fin de que estas tapas sean vendidas y de la capital que saquen, la den a una asociación que esta ayudara con tratamientos a personas con cáncer.</p>
+            <p>Docentes que participan: Juana Inés Flores</p>
+            <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Banco de Tapitas</a>
+        </section>
+    </div>
+
+    <br><br><br>
+
+    <script>
+        const imageElement = document.querySelector('.image');
+        let currentIndex = 0;
+
+        imageElement.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+    </script>
+
+</body>
+</html>

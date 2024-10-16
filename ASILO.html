@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASILO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(68, 73, 54);
+            color: #333;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image {
+            width: 350px;
+            transition: opacity 0.3s ease;
+            cursor: pointer; 
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #ddd;
+        }
+
+        .objective {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .saber-mas-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #cf0505;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .saber-mas-button:hover {
+            background-color: #cc0616;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ASILO PARA PERSONAS DE LA 3RA EDAD</h1>
+        <style>
+            @keyframes parpadeo {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+    
+            @keyframes brillo {
+                0% { text-shadow: 0 0 5px #3a0909, 0 0 10px #3a0909; }
+                50% { text-shadow: 0 0 20px #923d3d, 0 0 30px #923d3d; }
+                100% { text-shadow: 0 0 5px #c20707, 0 0 10px #c20707; }
+            }
+    
+            h1 {
+                font-size: 3em;
+                animation: parpadeo 1s infinite, brillo 1.5s infinite;
+            }
+        </style>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="ASILO.html">ASILO</a></li>
+                <li><a href="TAPAS.HTML">TAPAS</a></li>
+                <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
+    <div class="container">
+        <div class="image-container">
+            <img src="logoa.png" class="image" alt="LOGO DE PROYECTO PEC">
+            <button class="back-button" onclick="window.history.back()">Atrás</button>
+        </div>
+        <section>
+            <h2>Proyecto: Asilo para personas de la tercera edad</h2>
+            <p class="objective">Objetivo del proyecto:Fomentar en nuestros estudiantes la conciencia social, la sensibilación, sobre el cuidado del adulto mayor en su comunidad  </p>
+            <p>Docentes que participan:
+                <br>Gemma Adlemi Morales Villegas</br>
+                <br> J. Antionio Romo Marín</br>
+                <br> David Emmanuel Andrade Torres</br>
+                <br> Silvia Márquez Rodríguez</br>
+                <br> Claudia Elizabeth Martínez Murillo</br>
+                <br> Orlando Ramiro Esquivel Arellano</br>
+                <br> Ana Celia Rodarte Durón</br>
+                <br> Ma. Magdalena Valdivia López</br>
+                <br> María Patricia Arellano Flores</br>
+                <br>María Soledad Salazar Vázquez</br>
+                <br>Juana Inés Flores López</BR>
+            </p>
+            <a href="<a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Pagina sobre asilo</a>
+        </section>
+    </div>
+
+    <br><br><br>
+    <script> 
+        const images = [
+            'f1.JPEG', 
+            'f2.JPEG',
+            'f3.JPEG',
+            'f4.JPEG',
+            'f5.JPEG',
+            'f6.JPEG',
+        ];
+
+        const imageElement = document.querySelector('.image');
+        let currentIndex = 0;
+
+        imageElement.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+    </script>
+
+</body>
+</html>
