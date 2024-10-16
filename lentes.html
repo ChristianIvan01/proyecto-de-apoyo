@@ -83,7 +83,7 @@
         .objective {
             margin-top: 20px;
             font-size: 1.2em;
-            color: #555;
+            color: #fffdfd;
         }
 
         .saber-mas-button {
@@ -106,16 +106,33 @@
 
     <header>
         <h1>LENTES PARA TODOS</h1>
+        <style>
+            @keyframes parpadeo {
+                0%, 100% { opacity: 1; }
+                50% { opacity: 0; }
+            }
+    
+            @keyframes brillo {
+                0% { text-shadow: 0 0 5px #dfee14, 0 0 10px #d1b720; }
+                50% { text-shadow: 0 0 20px #7e9115, 0 0 30px #6a8a12; }
+                100% { text-shadow: 0 0 5px #c2eb0f, 0 0 10px #b7c72b; }
+            }
+    
+            h1 {
+                font-size: 3em;
+                animation: parpadeo 1s infinite, brillo 1.5s infinite;
+            }
+        </style>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Asilo.html">ASILO</a></li>
-                <li><a href="pagina3.html">Opción 3</a></li>
+                <li><a href="TAPAS.HTML">TAPAS</a></li>
                 <li><a href="pagina4.html">Opción 4</a></li>
             </ul>
         </nav>
     </header>
-
+    <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
     <div class="container">
         <div class="image-container">
             <img src="LOGOL.png" class="image" alt="LOGO DE PROYECTO PEC">
@@ -133,7 +150,7 @@
 
     <br><br><br>
 
-    <script>
+    <script> 
         const images = [
             'p1.png', 
             'p2.png',
