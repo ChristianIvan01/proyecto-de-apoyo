@@ -11,6 +11,7 @@
             padding: 0;
             background-color: rgb(247, 243, 245);
             color: #080808;
+            position: relative; /* Para posicionar el logo */
         }
 
         header {
@@ -59,17 +60,21 @@
             max-width: 800px;
             margin: auto;
             text-align: center;
+            padding-top: 60px; /* Espacio para el logo en la esquina */
         }
 
-        .image-container {
-            position: relative;
-            display: inline-block;
+        .logo {
+            position: absolute; /* Para colocar el logo en una esquina */
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Ajusta el tamaño del logo */
         }
 
         .image {
             width: 350px;
             transition: opacity 0.3s ease;
             cursor: pointer; 
+            margin: 10px; /* Espacio entre las imágenes */
         }
 
         .back-button {
@@ -141,12 +146,15 @@
         </nav>
     </header>
     
+    <img src="imagenes/logoa.png" class="logo" alt="LOGO DE PROYECTO PEC">
+    
     <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
     
     <div class="container">
         <div class="image-container">
-            <img src="imagenes/logoa.png" class="image" alt="LOGO DE PROYECTO PEC">
-            <button class="back-button" onclick="window.history.back()">Atrás</button>
+            <img src="imagenes/1.JPEG" class="image" alt="Imagen 1">
+            <img src="imagenes/2.JPEG" class="image" alt="Imagen 2">
+            <img src="imagenes/3.JPEG" class="image" alt="Imagen 3">
         </div>
         <section>
             <h2>Proyecto: Asilo para personas de la tercera edad</h2>
@@ -168,8 +176,6 @@
         </section>
     </div>
 
-    <br><br><br>
-
     <script> 
         const images = [
             'imagenes/1.JPEG', 
@@ -177,12 +183,14 @@
             'imagenes/3.JPEG',
         ];
 
-        const imageElement = document.querySelector('.image');
+        const imageElements = document.querySelectorAll('.image');
         let currentIndex = 0;
 
-        imageElement.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            imageElement.src = images[currentIndex];
+        imageElements.forEach(imageElement => {
+            imageElement.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                imageElement.src = images[currentIndex];
+            });
         });
     </script>
 
