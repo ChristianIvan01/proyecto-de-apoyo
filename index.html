@@ -17,7 +17,6 @@
             background-color: #6f79fd;
             padding: 20px;
             text-align: center;
-            position: relative;
         }
 
         nav ul {
@@ -109,22 +108,6 @@
             max-width: 100%; 
             height: auto; 
         }
-
-       
-        #musicButton {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #fff;
-            color: #333;
-            border: 1px solid #333;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #musicButton:hover {
-            background-color: #ddd;
-        }
     </style>
 </head>
 <body>
@@ -136,13 +119,13 @@
                 0%, 100% { opacity: 1; }
                 50% { opacity: 0; }
             }
-    
+
             @keyframes brillo {
                 0% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
                 50% { text-shadow: 0 0 20px #c340d4, 0 0 30px #1fbda8; }
                 100% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
             }
-    
+
             h1 {
                 font-size: 3em;
                 animation: parpadeo 1s infinite, brillo 1.5s infinite;
@@ -158,23 +141,14 @@
         </nav>
     </header>
 
-    <audio id="backgroundMusic" loop>
-        <source src="clocks.mp3" type="audio/mpeg">
-        <source src="clocks.ogg" type="audio/ogg">
-        Tu navegador no soporta la reproducción de audio.
-    </audio>
-
     <div class="container">
         <div class="image-container">
             <img src="LOGOPP.png" class="image" alt="LOGO DE PROYECTO PEC">
         </div>
 
-        
-        <button id="musicButton">Reproducir Música</button>
-
-       
-        <video controls width="1280" height="720">
+        <video autoplay loop muted>
             <source src="Intro.mp4" type="video/mp4">
+      
         </video>
 
         <section>
@@ -191,22 +165,5 @@
     <footer>
         <p>© 2024 Proyecto Escuela, Comunidad (PEC).</p>
     </footer>
-
-    <script>
-        const musicButton = document.getElementById("musicButton");
-        const backgroundMusic = document.getElementById("backgroundMusic");
-        let isPlaying = false;
-
-        musicButton.addEventListener("click", function() {
-            if (isPlaying) {
-                backgroundMusic.pause();
-                musicButton.textContent = "Reproducir Música";
-            } else {
-                backgroundMusic.play();
-                musicButton.textContent = "Pausar Música";
-            }
-            isPlaying = !isPlaying;
-        });
-    </script>
 </body>
 </html>
