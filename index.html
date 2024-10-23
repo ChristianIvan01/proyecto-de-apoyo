@@ -17,6 +17,7 @@
             background-color: #6f79fd;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
 
         nav ul {
@@ -108,6 +109,23 @@
             max-width: 100%; 
             height: auto; 
         }
+
+      
+        .music-control {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .music-control:hover {
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -139,10 +157,11 @@
                 <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
             </ul>
         </nav>
+        <button class="music-control" id="musicButton">Reproducir Música</button>
     </header>
 
-   
-    <audio autoplay loop>
+    
+    <audio id="backgroundMusic" loop>
         <source src="clocks.mp3" type="audio/mpeg">
         <source src="clocks.ogg" type="audio/ogg">
         Tu navegador no soporta la reproducción de audio.
@@ -153,6 +172,7 @@
             <img src="LOGOPP.png" class="image" alt="LOGO DE PROYECTO PEC">
         </div>
 
+       
         <video controls width="1280" height="720">
             <source src="Intro.mp4" type="video/mp4">
         </video>
@@ -171,5 +191,23 @@
     <footer>
         <p>© 2024 Proyecto Escuela, Comunidad (PEC).</p>
     </footer>
+
+    <script>
+        const musicButton = document.getElementById("musicButton");
+        const backgroundMusic = document.getElementById("backgroundMusic");
+        let isPlaying = false;
+
+        musicButton.addEventListener("click", function() {
+            if (isPlaying) {
+                backgroundMusic.pause();
+                musicButton.textContent = "Reproducir Música";
+            } else {
+                backgroundMusic.play();
+                musicButton.textContent = "Pausar Música";
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
 </body>
 </html>
+
