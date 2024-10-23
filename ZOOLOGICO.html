@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZOLOOGICO</title>
+    <title>ZOOLOGICO</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: rgb(68, 73, 54);
+            background-color: rgb(252, 250, 251);
             color: #333;
         }
 
         header {
-            background-color: #f0f0f0;
+            background: linear-gradient(90deg, #e964c1, #2ec4b7);
             padding: 20px;
             text-align: center;
         }
@@ -33,7 +33,16 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000000;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
         }
 
         footer {
@@ -100,29 +109,28 @@
         .saber-mas-button:hover {
             background-color: #0e7e86;
         }
+
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #58cf34, 0 0 10px #0f3a09; }
+            50% { text-shadow: 0 0 20px #0f691b, 0 0 30px #064b1d; }
+            100% { text-shadow: 0 0 5px #4e9731, 0 0 10px #0a5210; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>ZOLOOGICO</h1>
-        <style>
-            @keyframes parpadeo {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-            }
-    
-            @keyframes brillo {
-                0% { text-shadow: 0 0 5px #58cf34, 0 0 10px #0f3a09; }
-                50% { text-shadow: 0 0 20px #0f691b, 0 0 30px #064b1d; }
-                100% { text-shadow: 0 0 5px #4e9731, 0 0 10px #0a5210; }
-            }
-    
-            h1 {
-                font-size: 3em;
-                animation: parpadeo 1s infinite, brillo 1.5s infinite;
-            }
-        </style>
+        <h1>ZOOLOGICO</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -132,15 +140,17 @@
             </ul>
         </nav>
     </header>
-    <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
+    
+    <center><p style="color: #ffffff;">PASOS A SEGUIR</p></center>
+    
     <div class="container">
         <div class="image-container">
             <img src="logoz.PNG" class="image" alt="LOGO DE PROYECTO PEC">
             <button class="back-button" onclick="window.history.back()">Atrás</button>
         </div>
         <section>
-            <h2>Proyecto: ZOLOOGICO</h2>
-            <p class="objective">  </p>
+            <h2>Proyecto: ZOOLOGICO</h2>
+            <p class="objective"> </p>
             <p>Docentes que participan:
                 <br>Gemma Adlemi Morales Villegas</br>
                 <br> J. Antionio Romo Marín</br>
@@ -154,19 +164,19 @@
                 <br>María Soledad Salazar Vázquez</br>
                 <br>Juana Inés Flores López</BR>
             </p>
-            <a href="<a href="" target="_blank">Visita Pagina sobre ZOOLOGICO</a>
+            <a href="#" target="_blank">Visita Página sobre ZOOLOGICO</a>
         </section>
     </div>
 
     <br><br><br>
-    <script> 
+
+    <script>
         const images = [
-            '', 
-            '',
-            '',
-            '',
-            '',
-            '',
+            'imagen1.jpg', 
+            'imagen2.jpg',
+            'imagen3.jpg',
+            'imagen4.jpg',
+            'imagen5.jpg',
         ];
 
         const imageElement = document.querySelector('.image');
