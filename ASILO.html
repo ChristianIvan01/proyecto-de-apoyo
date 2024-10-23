@@ -184,6 +184,15 @@
             currentIndex = (currentIndex + 1) % images.length;
             imageElement.src = images[currentIndex];
         });
+
+        // Verificar que las imágenes existan
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+            img.onerror = () => {
+                console.error(`No se pudo cargar la imagen: ${src}`);
+            };
+        });
     </script>
 
 </body>
