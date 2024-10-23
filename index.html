@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #6f79fd;
+            background: linear-gradient(90deg, #6f79fd, #c340d4);
             padding: 20px;
             text-align: center;
         }
@@ -33,7 +33,16 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
         }
 
         footer {
@@ -51,14 +60,7 @@
             padding: 20px;
             background-color: #6f79fd;
             border-radius: 5px;
-        }
-
-        section h2 {
-            color: #333;
-        }
-
-        section p {
-            color: #666;
+            color: #fff;
         }
 
         .container {
@@ -74,63 +76,36 @@
 
         .image {
             width: 350px;
-            transition: opacity 0.3s ease;
         }
 
-        .image:hover {
-            opacity: 0;
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
         }
 
-        .back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #fff;
-            border: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
 
-        .back-button:hover {
-            background-color: #ddd;
-        }
-
-        .objective {
-            margin-top: 20px;
-            font-size: 1.2em;
-            color: #555;
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
+            50% { text-shadow: 0 0 20px #c340d4, 0 0 30px #1fbda8; }
+            100% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
         }
 
         video {
             max-width: 100%; 
             height: auto; 
+            margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
 
     <header>
         <h1>PROYECTO ESCUELA, COMUNIDAD (PEC)</h1>
-        <style>
-            @keyframes parpadeo {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-            }
-
-            @keyframes brillo {
-                0% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
-                50% { text-shadow: 0 0 20px #c340d4, 0 0 30px #1fbda8; }
-                100% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
-            }
-
-            h1 {
-                font-size: 3em;
-                animation: parpadeo 1s infinite, brillo 1.5s infinite;
-            }
-        </style>
         <nav>
             <ul>
                 <li><a href="lentes.html">LENTES PARA TODOS</a></li>
@@ -148,7 +123,6 @@
 
         <video autoplay loop muted>
             <source src="Intro.mp4" type="video/mp4">
-      
         </video>
 
         <section>
@@ -159,9 +133,7 @@
             <h4>Luna Camila Robles Blas</h4>
         </section>
     </div>
-    
-    <br>
-    <br>
+
     <footer>
         <p>© 2024 Proyecto Escuela, Comunidad (PEC).</p>
     </footer>
