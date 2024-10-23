@@ -9,12 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: rgb(233, 94, 124);
+            background-color: rgb(243, 235, 236);
             color: #130101;
         }
 
         header {
-            background-color: #f0f0f0;
+            background: linear-gradient(90deg, #da7ada, #007bff);
             padding: 20px;
             text-align: center;
         }
@@ -33,7 +33,16 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000000;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
         }
 
         footer {
@@ -83,7 +92,7 @@
         .objective {
             margin-top: 20px;
             font-size: 1.2em;
-            color: #ffffff;
+            color: #131212;
         }
 
         .saber-mas-button {
@@ -100,38 +109,38 @@
         .saber-mas-button:hover {
             background-color: #0056b3;
         }
+
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #ffea2e, 0 0 10px #f7d727; }
+            50% { text-shadow: 0 0 20px #d2e009, 0 0 30px #f1dd23; }
+            100% { text-shadow: 0 0 5px #faea04, 0 0 10px #facf0f; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>TAPAS</h1>
-        <style>
-            @keyframes parpadeo {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-            }
-    
-            @keyframes brillo {
-                0% { text-shadow: 0 0 5px #0c2d85, 0 0 10px #113ac2; }
-                50% { text-shadow: 0 0 20px #0918e0, 0 0 30px #04102b; }
-                100% { text-shadow: 0 0 5px #020479, 0 0 10px #05464e; }
-            }
-    
-            h1 {
-                font-size: 3em;
-                animation: parpadeo 1s infinite, brillo 1.5s infinite;
-            }
-        </style>
+        <h1>TAPITAS</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="ASILO.html">ASILO</a></li>
-                <li><a href="TAPAS.HTML">TAPAS</a></li>
-                <li><a href="ZOOLOGICO.html">ZOLOOGICO</a></li>
+                <li><a href="Asilo.html">ASILO</a></li>
+                <li><a href="TAPAS.html">TAPAS</a></li>
+                <li><a href="ZOOLOGICO.html">ZOOLÓGICO</a></li>
             </ul>
         </nav>
     </header>
+
     <div class="container">
         <div class="image-container">
             <img src="LOGOTAPAS.png" class="image" alt="LOGO DE PROYECTO PEC">
@@ -139,7 +148,7 @@
         </div>
         <section>
             <h2>Proyecto: TAPAS</h2>
-            <p class="objective">Objetivo del proyecto:El objetivo de este proyecto es recolectar tapas de botella, esto con el fin de que estas tapas sean vendidas y de la capital que saquen, la den a una asociación que esta ayudara con tratamientos a personas con cáncer.</p>
+            <p class="objective">Objetivo del proyecto: El objetivo de este proyecto es recolectar tapas de botella, con el fin de venderlas y que el capital recaudado sea donado a una asociación que ayuda a personas con cáncer mediante tratamientos.</p>
             <p>Docentes que participan: Juana Inés Flores</p>
             <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Banco de Tapitas</a>
         </section>
@@ -159,3 +168,4 @@
 
 </body>
 </html>
+
