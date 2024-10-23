@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #86f1d1;
+            background: linear-gradient(90deg, #86f1d1, #007bff);
             padding: 20px;
             text-align: center;
         }
@@ -33,12 +33,21 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #000000;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
         }
 
         footer {
             background-color: #333;
-            color: #080404;
+            color: #fff;
             text-align: center;
             padding: 10px;
             position: fixed;
@@ -100,39 +109,40 @@
         .saber-mas-button:hover {
             background-color: #0056b3;
         }
+
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #200c6b, 0 0 10px #1f3570; }
+            50% { text-shadow: 0 0 20px #200c6b, 0 0 30px #1f3570; }
+            100% { text-shadow: 0 0 5px #200c6b, 0 0 10px #1f3570; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>LENTES PARA TODOS</h1>
-        <style>
-            @keyframes parpadeo {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-            }
-    
-            @keyframes brillo {
-                0% { text-shadow: 0 0 5px #200c6b, 0 0 10px #1f3570; }
-                50% { text-shadow: 0 0 20px #200c6b, 0 0 30px #1f3570; }
-                100% { text-shadow: 0 0 5px #200c6b, 0 0 10px #1f3570; }
-            }
-    
-            h1 {
-                font-size: 3em;
-                animation: parpadeo 1s infinite, brillo 1.5s infinite;
-            }
-        </style>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="Asilo.html">ASILO</a></li>
-                <li><a href="TAPAS.HTML">TAPAS</a></li>
+                <li><a href="TAPAS.html">TAPAS</a></li>
                 <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
             </ul>
         </nav>
     </header>
+
     <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
+    
     <div class="container">
         <div class="image-container">
             <img src="LOGOL.png" class="image" alt="LOGO DE PROYECTO PEC">
@@ -143,7 +153,8 @@
             <p class="objective">Objetivo del proyecto: El objetivo es dotar a los alumnos que necesitan lentes a bajo costo, todo esto con el fin de mejorar su desempeño académico dentro y fuera de las aulas.</p>
             <p>Docentes que participan: Maestro Nazario Hernandez y Maestra Adriana Martinez</p>
 
-            <button class="saber-mas-button" onclick="window.open('saber_mas.html', '_blank');">SABER MÁS</button>
+            <!-- Botón SABER MÁS -->
+            <button class="saber-mas-button" onclick="window.location.href='saber_mas.html';">SABER MÁS</button>
         </section>
     </div>
 
@@ -171,3 +182,4 @@
 
 </body>
 </html>
+
