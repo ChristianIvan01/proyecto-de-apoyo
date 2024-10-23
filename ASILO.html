@@ -14,7 +14,7 @@
         }
 
         header {
-            background-color: #f1d2a2;
+            background: linear-gradient(90deg, #f1d2a2, #cf0505);
             padding: 20px;
             text-align: center;
         }
@@ -33,7 +33,16 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #0e0d0d;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border-radius: 5px;
         }
 
         footer {
@@ -100,39 +109,40 @@
         .saber-mas-button:hover {
             background-color: #cc0616;
         }
+
+        h1 {
+            font-size: 3em;
+            animation: parpadeo 1s infinite, brillo 1.5s infinite;
+        }
+
+        @keyframes parpadeo {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        @keyframes brillo {
+            0% { text-shadow: 0 0 5px #f780c1, 0 0 10px #d4626be7; }
+            50% { text-shadow: 0 0 20px #f780c1, 0 0 30px #d4626be7; }
+            100% { text-shadow: 0 0 5px #f780c1, 0 0 10px #d4626be7; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>ASILO PARA PERSONAS DE LA 3RA EDAD</h1>
-        <style>
-            @keyframes parpadeo {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
-            }
-    
-            @keyframes brillo {
-                0% { text-shadow: 0 0 5px #f780c1, 0 0 10px #d4626be7; }
-                50% { text-shadow: 0 0 20px #f780c1, 0 0 30px #d4626be7; }
-                100% { text-shadow: 0 0 5px #f780c1, 0 0 10px #d4626be7; }
-            }
-    
-            h1 {
-                font-size: 3em;
-                animation: parpadeo 1s infinite, brillo 1.5s infinite;
-            }
-        </style>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="ASILO.html">ASILO</a></li>
-                <li><a href="TAPAS.HTML">TAPAS</a></li>
+                <li><a href="TAPAS.html">TAPAS</a></li>
                 <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
             </ul>
         </nav>
     </header>
+    
     <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
+    
     <div class="container">
         <div class="image-container">
             <img src="logoa.png" class="image" alt="LOGO DE PROYECTO PEC">
@@ -140,25 +150,26 @@
         </div>
         <section>
             <h2>Proyecto: Asilo para personas de la tercera edad</h2>
-            <p class="objective">Objetivo del proyecto:Fomentar en nuestros estudiantes la conciencia social, la sensibilación, sobre el cuidado del adulto mayor en su comunidad  </p>
+            <p class="objective">Objetivo del proyecto: Fomentar en nuestros estudiantes la conciencia social y sensibilización sobre el cuidado del adulto mayor en su comunidad.</p>
             <p>Docentes que participan:
                 <br>Gemma Adlemi Morales Villegas</br>
-                <br> J. Antionio Romo Marín</br>
-                <br> David Emmanuel Andrade Torres</br>
-                <br> Silvia Márquez Rodríguez</br>
-                <br> Claudia Elizabeth Martínez Murillo</br>
-                <br> Orlando Ramiro Esquivel Arellano</br>
-                <br> Ana Celia Rodarte Durón</br>
-                <br> Ma. Magdalena Valdivia López</br>
-                <br> María Patricia Arellano Flores</br>
+                <br>J. Antonio Romo Marín</br>
+                <br>David Emmanuel Andrade Torres</br>
+                <br>Silvia Márquez Rodríguez</br>
+                <br>Claudia Elizabeth Martínez Murillo</br>
+                <br>Orlando Ramiro Esquivel Arellano</br>
+                <br>Ana Celia Rodarte Durón</br>
+                <br>Ma. Magdalena Valdivia López</br>
+                <br>María Patricia Arellano Flores</br>
                 <br>María Soledad Salazar Vázquez</br>
-                <br>Juana Inés Flores López</BR>
+                <br>Juana Inés Flores López</br>
             </p>
-            <a href="<a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Pagina sobre asilo</a>
+            <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Página sobre asilo</a>
         </section>
     </div>
 
     <br><br><br>
+
     <script> 
         const images = [
             'f1.JPEG', 
