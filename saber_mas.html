@@ -35,6 +35,23 @@
     <center>
         <section>
             <h1>Problemas de visión</h1>
+            <style>
+                @keyframes parpadeo {
+                    0%, 100% { opacity: 1; }
+                    50% { opacity: 0; }
+                }
+        
+                @keyframes brillo {
+                    0% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
+                    50% { text-shadow: 0 0 20px #c340d4, 0 0 30px #1fbda8; }
+                    100% { text-shadow: 0 0 5px #c340d4, 0 0 10px #1fbda8; }
+                }
+        
+                h1 {
+                    font-size: 3em;
+                    animation: parpadeo 1s infinite, brillo 1.5s infinite;
+                }
+            </style>
             <p>Haz clic en las imágenes para alternar entre astigmatismo y miopía</p>
 
             
@@ -81,3 +98,5 @@
     </center>
 </body>
 </html>
+
+
