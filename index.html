@@ -110,19 +110,19 @@
             height: auto; 
         }
 
-        .music-control {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #fff;
+       
+        #musicButton {
+            display: inline-block;
+            margin-top: 20px;
             padding: 10px 20px;
-            border: none;
+            background-color: #fff;
+            color: #333;
+            border: 1px solid #333;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
 
-        .music-control:hover {
+        #musicButton:hover {
             background-color: #ddd;
         }
     </style>
@@ -156,9 +156,6 @@
                 <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
             </ul>
         </nav>
-
-      
-        <button class="music-control" id="musicButton">Reproducir Música</button>
     </header>
 
     <audio id="backgroundMusic" loop>
@@ -172,6 +169,10 @@
             <img src="LOGOPP.png" class="image" alt="LOGO DE PROYECTO PEC">
         </div>
 
+        
+        <button id="musicButton">Reproducir Música</button>
+
+       
         <video controls width="1280" height="720">
             <source src="Intro.mp4" type="video/mp4">
         </video>
