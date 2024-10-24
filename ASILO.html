@@ -59,25 +59,15 @@
             max-width: 800px;
             margin: auto;
             text-align: center;
-            position: relative;
-        }
-
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 100px; 
         }
 
         .image-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
+            position: relative;
+            display: inline-block;
         }
 
         .image {
-            width: 250px; 
-            margin: 0 10px; 
+            width: 350px;
             transition: opacity 0.3s ease;
             cursor: pointer; 
         }
@@ -150,12 +140,14 @@
             </ul>
         </nav>
     </header>
-
-    <img src="logoa.png" class="logo" alt="LOGO DE PROYECTO PEC">
-
+    
     <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
     
     <div class="container">
+        <div class="image-container">
+            <img src="logoa.png" class="image" alt="LOGO DE PROYECTO PEC">
+            <button class="back-button" onclick="window.history.back()">Atrás</button>
+        </div>
         <section>
             <h2>Proyecto: Asilo para personas de la tercera edad</h2>
             <p class="objective">Objetivo del proyecto: Fomentar en nuestros estudiantes la conciencia social y sensibilización sobre el cuidado del adulto mayor en su comunidad.</p>
@@ -174,12 +166,6 @@
             </p>
             <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Página sobre asilo</a>
         </section>
-
-        <div class="image-container">
-            <img src="1.JPEG" class="image" alt="Imagen 1">
-            <img src="2.JPEG" class="image" alt="Imagen 2">
-            <img src="3.JPEG" class="image" alt="Imagen 3">
-        </div>
     </div>
 
     <br><br><br>
@@ -191,16 +177,15 @@
             '3.JPEG',
         ];
 
-        const imageElements = document.querySelectorAll('.image');
+        const imageElement = document.querySelector('.image');
         let currentIndex = 0;
 
-        imageElements.forEach((imageElement, index) => {
-            imageElement.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % images.length;
-                imageElement.src = images[currentIndex];
-            });
+        imageElement.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            imageElement.src = images[currentIndex];
         });
     </script>
 
 </body>
 </html>
+
