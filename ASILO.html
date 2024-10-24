@@ -11,7 +11,6 @@
             padding: 0;
             background-color: rgb(247, 243, 245);
             color: #080808;
-            position: relative; /* Para posicionar el logo */
         }
 
         header {
@@ -60,21 +59,26 @@
             max-width: 800px;
             margin: auto;
             text-align: center;
-            padding-top: 60px; /* Espacio para el logo en la esquina */
         }
 
         .logo {
-            position: absolute; /* Para colocar el logo en una esquina */
-            top: 10px;
-            left: 10px;
-            width: 100px; /* Ajusta el tamaño del logo */
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px; /* Cambia el tamaño del logo */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px; /* Espacio superior para las imágenes */
         }
 
         .image {
-            width: 350px;
+            width: 250px; /* Tamaño de las imágenes */
+            margin: 0 10px; /* Espaciado entre las imágenes */
             transition: opacity 0.3s ease;
             cursor: pointer; 
-            margin: 10px; /* Espacio entre las imágenes */
         }
 
         .back-button {
@@ -145,17 +149,12 @@
             </ul>
         </nav>
     </header>
-    
-    <img src="imagenes/logoa.png" class="logo" alt="LOGO DE PROYECTO PEC">
-    
+
+    <img src="logoa.png" class="logo" alt="LOGO DE PROYECTO PEC">
+
     <CENTER> <p style="color: #ffffff;">PASOS A SEGUIR</p> </CENTER>
     
     <div class="container">
-        <div class="image-container">
-            <img src="imagenes/1.JPEG" class="image" alt="Imagen 1">
-            <img src="imagenes/2.JPEG" class="image" alt="Imagen 2">
-            <img src="imagenes/3.JPEG" class="image" alt="Imagen 3">
-        </div>
         <section>
             <h2>Proyecto: Asilo para personas de la tercera edad</h2>
             <p class="objective">Objetivo del proyecto: Fomentar en nuestros estudiantes la conciencia social y sensibilización sobre el cuidado del adulto mayor en su comunidad.</p>
@@ -174,19 +173,27 @@
             </p>
             <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Página sobre asilo</a>
         </section>
+
+        <div class="image-container">
+            <img src="1.JPEG" class="image" alt="Imagen 1">
+            <img src="2.JPEG" class="image" alt="Imagen 2">
+            <img src="3.JPEG" class="image" alt="Imagen 3">
+        </div>
     </div>
+
+    <br><br><br>
 
     <script> 
         const images = [
-            'imagenes/1.JPEG', 
-            'imagenes/2.JPEG',
-            'imagenes/3.JPEG',
+            '1.JPEG', 
+            '2.JPEG',
+            '3.JPEG',
         ];
 
         const imageElements = document.querySelectorAll('.image');
         let currentIndex = 0;
 
-        imageElements.forEach(imageElement => {
+        imageElements.forEach((imageElement, index) => {
             imageElement.addEventListener('click', () => {
                 currentIndex = (currentIndex + 1) % images.length;
                 imageElement.src = images[currentIndex];
