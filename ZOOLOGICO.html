@@ -61,9 +61,14 @@
             text-align: center;
         }
 
+        .logo-container {
+            margin: 30px 0; 
+        }
+
         .image-container {
             position: relative;
             display: inline-block;
+            margin: 20px 0; 
         }
 
         .image {
@@ -72,42 +77,35 @@
             cursor: pointer; 
         }
 
-        .back-button {
+        .arrow-button {
             position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
             background-color: #fff;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
             transition: background-color 0.3s;
         }
 
-        .back-button:hover {
+        .arrow-button:hover {
             background-color: #ddd;
+        }
+
+        .left-arrow {
+            left: -40px; 
+        }
+
+        .right-arrow {
+            right: -40px; 
         }
 
         .objective {
             margin-top: 20px;
             font-size: 1.2em;
-            color: #ffffff;
-        }
-
-        .saber-mas-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #2ec4b7;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .saber-mas-button:hover {
-            background-color: #0e7e86;
+            color: #333; 
         }
 
         h1 {
@@ -125,6 +123,39 @@
             50% { text-shadow: 0 0 20px #0f691b, 0 0 30px #064b1d; }
             100% { text-shadow: 0 0 5px #4e9731, 0 0 10px #0a5210; }
         }
+
+        .ad-left, .ad-right {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        .ad-left {
+            left: 10px;
+        }
+        
+        .ad-right {
+            right: 10px;
+        }
+
+       
+        .btn-involucrados {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #2ec4b7;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-involucrados:hover {
+            background-color: #1a8a82;
+        }
     </style>
 </head>
 <body>
@@ -134,41 +165,36 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="ASILO.html">ASILO</a></li>
-                <li><a href="TAPAS.HTML">TAPAS</a></li>
-                <li><a href="ZOOLOGICO.html">ZOOLOGICO</a></li>
             </ul>
         </nav>
     </header>
-    
-    <center><p style="color: #ffffff;">PASOS A SEGUIR</p></center>
+
+    <center><p style="color: #333;">PASOS A SEGUIR</p></center>
     
     <div class="container">
-        <div class="image-container">
-            <img src="logoz.PNG" class="image" alt="LOGO DE PROYECTO PEC">
-            <button class="back-button" onclick="window.history.back()">Atrás</button>
+        <div class="logo-container">
+            <img src="logoz.PNG" alt="LOGO DE PROYECTO PEC" style="width: 200px;"> 
         </div>
+
+        <div class="objective">
+            <p>Ejecución del fortalecimiento del compromiso ambiental de cada persona, a través del conocimiento del papel de los zoológicos en la conservación ...</p> 
+        </div>
+
+        <div class="image-container">
+            <button class="arrow-button left-arrow" id="prevBtn">&#9664;</button> 
+            <img src="imagen1.jpg" class="image" alt="Imagen del proyecto">
+            <button class="arrow-button right-arrow" id="nextBtn">&#9654;</button> 
+        </div>
+
         <section>
             <h2>Proyecto: ZOOLOGICO</h2>
-            <p class="objective"> </p>
-            <p>Docentes que participan:
-                <br>Gemma Adlemi Morales Villegas</br>
-                <br> J. Antionio Romo Marín</br>
-                <br> David Emmanuel Andrade Torres</br>
-                <br> Silvia Márquez Rodríguez</br>
-                <br> Claudia Elizabeth Martínez Murillo</br>
-                <br> Orlando Ramiro Esquivel Arellano</br>
-                <br> Ana Celia Rodarte Durón</br>
-                <br> Ma. Magdalena Valdivia López</br>
-                <br> María Patricia Arellano Flores</br>
-                <br>María Soledad Salazar Vázquez</br>
-                <br>Juana Inés Flores López</BR>
-            </p>
-            <a href="#" target="_blank">Visita Página sobre ZOOLOGICO</a>
+            <p>Docentes que participan: ...</p>
+            <a href="Prof.html" class="btn-involucrados" target="_blank">INVOLUCRADOS</a>
         </section>
     </div>
 
-    <br><br><br>
+    <img src="anuncio1.jpg" alt="Anuncio izquierdo" class="ad-left">
+    <img src="anuncio2.jpg" alt="Anuncio derecho" class="ad-right">
 
     <script>
         const images = [
@@ -182,7 +208,15 @@
         const imageElement = document.querySelector('.image');
         let currentIndex = 0;
 
-        imageElement.addEventListener('click', () => {
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            imageElement.src = images[currentIndex];
+        });
+
+        nextBtn.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % images.length;
             imageElement.src = images[currentIndex];
         });
