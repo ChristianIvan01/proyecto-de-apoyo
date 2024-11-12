@@ -61,9 +61,14 @@
             text-align: center;
         }
 
+        .logo-container {
+            margin: 20px 0; 
+        }
+
         .image-container {
             position: relative;
             display: inline-block;
+            margin: 20px 0;
         }
 
         .image {
@@ -115,6 +120,29 @@
             animation: parpadeo 1s infinite, brillo 1.5s infinite;
         }
 
+        .steps-title {
+            color: black;
+            margin-top: 20px; 
+            font-size: 1.5em; 
+        }
+
+        .involucrados-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #2ec4b7;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .involucrados-button:hover {
+            background-color: #1b9a8d;
+        }
+
         @keyframes parpadeo {
             0%, 100% { opacity: 1; }
             50% { opacity: 0; }
@@ -125,6 +153,22 @@
             50% { text-shadow: 0 0 20px #d2e009, 0 0 30px #f1dd23; }
             100% { text-shadow: 0 0 5px #faea04, 0 0 10px #facf0f; }
         }
+
+        .ad-left, .ad-right {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        .ad-left {
+            left: 10px;
+        }
+        
+        .ad-right {
+            right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -134,30 +178,49 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="Asilo.html">ASILO</a></li>
-                <li><a href="TAPAS.html">TAPAS</a></li>
-                <li><a href="ZOOLOGICO.html">ZOOLÓGICO</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container">
-        <div class="image-container">
+        <div class="logo-container">
             <img src="LOGOTAPAS.png" class="image" alt="LOGO DE PROYECTO PEC">
             <button class="back-button" onclick="window.history.back()">Atrás</button>
         </div>
+
+        <p class="steps-title">PASOS A SEGUIR</p>
+
+        <div class="image-container">
+            <img src="p1.png" class="image" alt="Imagen del proyecto">
+            <button class="back-button" onclick="window.history.back()">Atrás</button>
+        </div>
+
         <section>
             <h2>Proyecto: TAPAS</h2>
             <p class="objective">Objetivo del proyecto: El objetivo de este proyecto es recolectar tapas de botella, con el fin de venderlas y que el capital recaudado sea donado a una asociación que ayuda a personas con cáncer mediante tratamientos.</p>
-            <p>Docentes que participan: Juana Inés Flores</p>
             <a href="https://www.bancodetapitas.org/empresas" target="_blank">Visita Banco de Tapitas</a>
         </section>
+
+        <a href="Prof2.html" class="involucrados-button">INVOLUCRADOS</a>
     </div>
 
     <br><br><br>
 
+    <img src="anuncio1.jpg" alt="Anuncio izquierdo" class="ad-left">
+    <img src="anuncio2.jpg" alt="Anuncio derecho" class="ad-right">
+
     <script>
-        const imageElement = document.querySelector('.image');
+        const images = [
+            'p1.png', 
+            'p2.png',
+            'p3.png',
+            'p4.png',
+            'p5.png',
+            'p6.png',
+            'p7.png'
+        ];
+
+        const imageElement = document.querySelector('.image-container .image');
         let currentIndex = 0;
 
         imageElement.addEventListener('click', () => {
